@@ -5,10 +5,12 @@
  */
 package com.atin.rest.services;
 
+import com.atin.rest.app.JPAUtility;
 import com.atin.rest.model.Category;
-import javax.ejb.Stateless;
+import com.atin.rest.model.Product;
+import java.util.Collection;
+import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -19,17 +21,25 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Atin
  */
-@Stateless
-@Path("category")
+@Path("api")
 public class CategoryService extends AbstractService<Category> {
 
-    @PersistenceContext(unitName = "com.atin_rest-app_war_1.0-SNAPSHOTPU")
-    private EntityManager entityManager;
-    
     public CategoryService() {
         super(Category.class);
     }
 
+    /**
+     *
+     * @return
+     */
+    @GET
+    @Path("categories")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Override
+    public List<Category> findAll() {
+        return super.findAll();
+    }
+    
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -37,9 +47,16 @@ public class CategoryService extends AbstractService<Category> {
         return super.find(id);
     }
     
+    @GET
+    @Path("{id}/products")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Collection<Product> findProducts(@PathParam("id") Integer id) {
+        return super.find(id).getProductCollection();
+    }
+    
     @Override
     protected EntityManager getEntityManager() {
-        return entityManager;
+        return JPAUtility.getEntityManager();
     }
     
 }

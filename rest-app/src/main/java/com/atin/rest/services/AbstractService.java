@@ -9,6 +9,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaQuery;
 
+/**
+ *
+ * @author Atin
+ */
 public abstract class AbstractService<T> {
 
     private final Class<T> entityClass;
