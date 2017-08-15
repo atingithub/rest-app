@@ -1,7 +1,59 @@
 .header-container {
-	display: block;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
-.header-container img, h1 {
+#logo {
+	width: 100px;
+	height: 100px;
+}
+
+.header-container #logo, #logoText {
 	display: inline-block;
+}
+
+#logoText {
+	margin-top: -15px;
+	margin-left: 50px;
+}
+
+#stalk-container {
+	margin-top: -28px;
+	margin-left: -2px;
+}
+
+#header-pos {
+	margin-top: -25px;
+}
+
+#bottom-container {
+	margin-top: 60px;
+}
+
+#language {
+	float: right;
+}
+
+#pr-description, #pr-price, #pr-cart-btn {
+	margin-top: 10px;
+}
+
+#text-box-size {
+}
+
+#product-id-name {
+	font-size: 18px;
+}
+
+#category-list {
+	margin-top: 40px;
+}
+
+.header-container, .top-widget {
+	display: inline-block;
+}
+
+.top-widget {
+	margin-top: 10px;
+	margin-left: 20px;
 }

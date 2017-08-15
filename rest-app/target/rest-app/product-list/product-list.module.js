@@ -1,1 +1,4 @@
-angular.module('products', ['core.product']);
+angular.module('productList', [
+	'ngRoute',
+	'core.product'
+]);

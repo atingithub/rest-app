@@ -4,17 +4,17 @@ angular.
     function($resource) {
 			
       return {
-				Products : $resource('http://localhost:8081/rest-app/rest/api/1/products', {}, {
+				Category : $resource('http://localhost:8081/rest-app/rest/api/categories', {}, {
 					query: {
 						method: 'GET',
-						params: {categoryId: '1'},
 						isArray: true
 					}
 				}),
 				
-				Category : $resource('http://localhost:8081/rest-app/rest/api/categories', {}, {
-					query: {
+				Products : $resource('http://localhost:8081/rest-app/rest/api/products?name=:categoryName', {}, {
+					get: {
 						method: 'GET',
+						params: {categoryName: 'dairy'},
 						isArray: true
 					}
 				})

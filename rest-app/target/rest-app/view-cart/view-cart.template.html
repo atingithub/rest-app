@@ -1,0 +1,51 @@
+<div class="row">
+	<p>Your shopping cart contains {{$ctrl.cartItems.length}} item.</p>
+</div>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-6">
+		<div class="btn-toolbar" role="toolbar" aria-label="...">
+			<div class="btn-group" role="group" aria-label="...">
+				<button class="btn btn-default" type="button">clear cart</button>
+			</div>
+			<div class="btn-group" role="group" aria-label="...">
+				<button class="btn btn-default" type="button"><a href="#!/products">continue shopping</a></button>
+			</div>
+			<div class="btn-group" role="group" aria-label="...">
+				<button type="button" class="btn btn-default">
+					<a href="#!/checkout">proceed to checkout <i class="fa fa-arrow-right"></i></a>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>product</th>
+				<th>name</th>
+				<th>price</th>
+				<th>quantity</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="cart in $ctrl.cartItems">
+				<td><img ng-src="img/products/{{cart.name}}.png" class="img-responsive" alt="dairy"></td>
+				<td><div id="pr-description">{{cart.description}}</div></td>
+				<td><div id="pr-price"><i class="fa fa-usd"></i> {{cart.price}}</div></td>
+				<td>
+					<div id="pr-update">
+						<input type="text" class="form-control" size="2">
+					</div>
+				</td>
+				<td>
+					<div id="pr-update-btn">
+						<button class="btn btn-default" type="button">update</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

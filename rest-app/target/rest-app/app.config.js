@@ -13,6 +13,15 @@ angular.
         when('/products', {
           template: '<product-list></product-list>'
         }).
+				when('/cart', {
+          template: '<view-cart></view-cart>'
+        }).
+				when('/checkout', {
+          template: '<checkout-item></checkout-item>'
+        }).
+				when('/confirmation', {
+          template: '<confirmation-view></confirmation-view>'
+        }).
         otherwise('/category');
     }
   ]);

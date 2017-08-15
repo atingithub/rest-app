@@ -1,0 +1,43 @@
+<div id="singleColumn" class="row">
+
+		<p id="confirmationText">
+				[ text ]
+				<br><br>
+				[ order reference number ]
+		</p>
+
+		<div class="summaryColumn" >
+
+				<table id="orderSummaryTable" class="detailsTable" >
+					<thead>
+						<tr class="header">
+								<th style="padding:10px">[ order summary table ]</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="order in $ctrl.orderDetails">
+							<td>{{order.name}}</td>
+							<td>{{order.price}}</td>
+						</tr>
+					</tbody>
+				</table>
+
+		</div>
+
+		<div class="summaryColumn" >
+
+			<table id="deliveryAddressTable" class="table table-striped detailsTable">
+				<thead>
+					<tr><th id="product-id-name">[ customer details ]</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>{{$ctrl.customerDetails.name}}</td></tr>
+					<tr><td>{{$ctrl.customerDetails.email}}</td></tr>
+					<tr><td>{{$ctrl.customerDetails.phone}}</td></tr>
+					<tr><td>{{$ctrl.customerDetails.address}}</td></tr>
+				</tbody>
+			</table>
+
+		</div>
+
+</div>

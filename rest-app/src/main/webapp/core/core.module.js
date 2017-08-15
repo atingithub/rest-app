@@ -1,1 +1,5 @@
-angular.module('core', ['core.product']);
+angular.module('core', [
+	'core.product',
+	'core.cart',
+	'core.customer'
+]);

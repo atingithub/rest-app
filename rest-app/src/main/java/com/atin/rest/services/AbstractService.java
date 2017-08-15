@@ -24,15 +24,24 @@ public abstract class AbstractService<T> {
     protected abstract EntityManager getEntityManager();
 
     public void create(T entity) {
-        getEntityManager().persist(entity);
+        EntityManager em = getEntityManager();
+        em.getTransaction().begin();
+        em.persist(entity);
+        em.getTransaction().commit();
     }
 
     public void edit(T entity) {
-        getEntityManager().merge(entity);
+        EntityManager em = getEntityManager();
+        em.getTransaction().begin();
+        em.merge(entity);
+        em.getTransaction().commit();
     }
 
     public void remove(T entity) {
+        EntityManager em = getEntityManager();
+        em.getTransaction().begin();
         getEntityManager().remove(getEntityManager().merge(entity));
+        em.getTransaction().commit();
     }
 
     public T find(Object id) {

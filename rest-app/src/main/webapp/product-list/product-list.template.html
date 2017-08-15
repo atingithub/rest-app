@@ -1,35 +1,31 @@
 <div class="row">
-
-	<div class="col-md-6">
-		<h2>Welcome to the online home of the Affable Bean Green Grocer.</h2>
-		<h4>Our unique home delivery service brings you fresh organic produce, dairy, meats, breads and other delicious and healthy items direct to your doorstep.</h4>
-	</div>
-	
-	
-	<div class="col-md-6">
-		
-		<div class="row">
-			<div class="col-md-6">
-				<a href="#!/products"><img src="img/categories/dairy.jpg" class="img-responsive" alt="dairy"></a>
-				<h3>dairy</h3>
-			</div>
-			<div class="col-md-6">
-				<img src="img/categories/meats.jpg" class="img-responsive" alt="meats">
-				<h3>meats</h3>
-			</div>
+	<div class="col-md-4">
+		<div id="category-list" class="list-group">
+			<a href="#" class="list-group-item" ng-repeat="category in $ctrl.categories">
+				{{category.name}}
+				<div class="pull-right"><i class="fa fa-angle-right"></i></div>
+			</a>
 		</div>
-		
-		<div class="row">
-			<div class="col-md-6">
-				<img src="img/categories/bakery.jpg" class="img-responsive" alt="bakery">
-				<h3>bakery</h3>
-			</div>
-			<div class="col-md-6">
-				<img src="img/categories/fruit&veg.jpg" class="img-responsive" alt="fruit & vegs">
-				<h3>fruit & veg</h3>
-			</div>
-		</div>
-		
 	</div>
-
-</div>
+		
+	<div class="col-md-8">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th id="product-id-name">{{$ctrl.products[0].categoryId.name}}</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="product in $ctrl.products">
+					<td><img ng-src="img/products/{{product.name}}.png" class="img-responsive" alt="dairy"></td>
+					<td><div id="pr-description"></div>{{product.description}}</td>
+					<td><div id="pr-price"><i class="fa fa-usd"></i> {{product.price}}</div></td>
+					<td><div id="pr-cart-btn"></div>
+						<button type="button" class="btn btn-default" ng-click=$ctrl.addToCart(product)>add to cart</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>	
+ 

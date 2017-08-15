@@ -4,5 +4,8 @@ angular.module('restApp', [
 	'ngAnimate',
 	'core',
 	'categoryList',
-  'products'
+  'productList',
+	'viewCart',
+	'checkoutItem',
+	'confirmationView'
 ]);

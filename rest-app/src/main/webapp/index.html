@@ -19,29 +19,48 @@
 		<script src="category-list/category-list.module.js"></script>
 		<script src="product-list/product-list.component.js"></script>
 		<script src="product-list/product-list.module.js"></script>
+		<script src="view-cart/view-cart.component.js"></script>
+		<script src="view-cart/view-cart.module.js"></script>
+		<script src="checkout-item/checkout-item.component.js"></script>
+		<script src="checkout-item/checkout-item.module.js"></script>
+		<script src="confirmation-view/confirmation-view.component.js"></script>
+		<script src="confirmation-view/confirmation-view.module.js"></script>
 		<script src="core/core.module.js"></script>
 		<script src="core/product/product.module.js"></script>
 		<script src="core/product/product.service.js"></script>
+		<script src="core/cart/cart.module.js"></script>
+		<script src="core/cart/cart.service.js"></script>
+		<script src="core/customer/customer.module.js"></script>
+		<script src="core/customer/customer.service.js"></script>
   </head>
   <body>
 		
-		<div ng-view></div>
-		
-		<!--<div class="container-fluid">
-			
-			
-			<div class="row">
-				
-				<div class="header-container">
-					<img src="img/logo.png" class="img-responsive" alt="logo">
-					<h1>the affable bean</h1>
-				</div>				
-				
-			</div> 
-			
+		<div class="container">
+			<div class="row header-container">
+				<!--<div id="stalk-container">
+					<img src="img/stalk.png" class="img-responsive" alt="stalk">
+				</div> -->
+				<div>
+					<a href="#!/category"><img id="logo" src="img/logo.png" class="img-responsive" alt="logo">
+					<img id="logoText" src="img/logoText.png" class="img-responsive" alt="logo"></a>
+				</div>
+			</div>
+			<div class="row top-widget pull-right">
+				<i class="fa fa-shopping-cart"></i> 0 items 
+				<button type="button" class="btn btn-default"><a href="#!/cart">view cart</a></button>
+				<button type="button" class="btn btn-default" ng-hide=true>
+					<a href="#!/checkout">proceed to checkout <i class="fa fa-arrow-right"></i></a>
+				</button>
+				<button type="button" class="btn btn-default" ng-hide=true><i class="fa fa-user"></i> login</button>
+			</div>
+						
 			<div ng-view></div>
+			
+			<div class="row footer">
+				<a href="#">Privacy Policy</a> :: <a href="#">Contact</a> <i class="fa fa-copyright"></i> 2017 the affable bean.
+			</div>
 		
-		</div>-->
+		</div>
       
   </body>
 </html>
