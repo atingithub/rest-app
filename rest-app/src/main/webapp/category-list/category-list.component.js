@@ -22,6 +22,14 @@ angular.
 										{
 												"id": 4,
 												"name": "fruit & veg"
+										},
+										{
+												"id": 5,
+												"name": "dry fruits"
+										},
+										{
+												"id": 6,
+												"name": "fresh fish"
 										}
 				];
 				

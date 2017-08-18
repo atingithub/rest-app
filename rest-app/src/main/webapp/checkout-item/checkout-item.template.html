@@ -1,6 +1,6 @@
 <div classs="row">
 
-	<div class="col-md-12">
+	<div class="col-md-7">
 		<h1>checkout</h1>
 		<p>In order to purchase the items in your shopping cart, please provide us with the following information:</p>
 	</div>
@@ -54,38 +54,39 @@
 	</div>
 
 	<div class="col-md-6">
-		<div>
-			<ul>
-				<li>Next-day delivery is guaranteed</li>
-				<li>A <i class="fa fa-usd"></i> {{$ctrl.surcharge}} delivery surcharge is applied to all purchase orders</li>
-			</ul>
+		<div class="well">
+			<p><i class="fa fa-check"></i> Next-day delivery is guaranteed</p>
+			<p><i class="fa fa-check"></i> A <i class="fa fa-usd"></i> {{$ctrl.surcharge}} delivery surcharge is applied to all purchase orders</p>
 		</div>
 		
-		<div>
-			<div class="form-group">
-				<label class="col-sm-4 control-label">subtotal: </label>
-				<div class="col-sm-8">
-					<label class="control-label"><i class="fa fa-usd"></i> {{$ctrl.subtotal}}</label>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				
+				<div class="form-group">
+					<label class="col-sm-4 control-label">subtotal: </label>
+					<div class="col-sm-8">
+						<label class="control-label"><i class="fa fa-usd"></i> {{$ctrl.subtotal}}</label>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-4 control-label">delivery charge:</label>
+					<div class="col-sm-8">
+						<label class="control-label"><i class="fa fa-usd"></i> {{$ctrl.surcharge}}</label>
+					</div>
 				</div>
 			</div>
-			
-			<div class="form-group">
-				<label class="col-sm-4 control-label">delivery charge:</label>
-				<div class="col-sm-8">
-					<label class="control-label"><i class="fa fa-usd"></i> {{$ctrl.surcharge}}</label>
-				</div>
-			</div>
-			
-			<hr>
-			
-			<div class="form-group">
-				<label class="col-sm-4 control-label">total:</label>
-				<div class="col-sm-8">
-					<label class="control-label"><i class="fa fa-usd"></i> {{$ctrl.total}}</label>
+			<div class="panel-footer">
+				<div class="form-group">
+					<label class="col-sm-4 control-label">total:</label>
+					<div class="col-sm-8">
+						<label class="control-label"><i class="fa fa-usd"></i> {{$ctrl.total}}</label>
+					</div>
 				</div>
 			</div>
 			
 		</div>
+		
 	</div>
 	
 </div>

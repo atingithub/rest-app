@@ -8,19 +8,29 @@ angular.
 
       $routeProvider.
         when('/category', {
-          template: '<category-list></category-list>'
+          template: '<top-view></top-view>' +
+										'<header-view></header-view>' +
+				            '<category-list></category-list>'
         }).
         when('/products', {
-          template: '<product-list></product-list>'
+          template: '<top-view></top-view>' +
+										'<header-view></header-view>' +
+										'<product-list></product-list>'
         }).
 				when('/cart', {
-          template: '<view-cart></view-cart>'
+          template: '<top-view></top-view>' +
+										'<header-view></header-view>' +
+										'<view-cart></view-cart>'
         }).
 				when('/checkout', {
-          template: '<checkout-item></checkout-item>'
+          template: '<top-view></top-view>' +
+										'<header-view></header-view>' +
+										'<checkout-item></checkout-item>'
         }).
 				when('/confirmation', {
-          template: '<confirmation-view></confirmation-view>'
+          template: '<top-view></top-view>' +
+										'<header-view></header-view>' +
+										'<confirmation-view></confirmation-view>'
         }).
         otherwise('/category');
     }

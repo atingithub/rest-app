@@ -1,0 +1,37 @@
+<div class="row top-view">
+	<div class="col-md-2">
+		<i class="fa fa-shopping-cart"></i> {{$ctrl.cartCount}} items
+	</div>
+	
+	<div class="col-md-2">
+		<button type="button" class="btn btn-default" ng-click="$ctrl.viewCart()" ng-show="$ctrl.showCart">
+			view cart
+		</button>
+	</div>
+
+	<div class="col-md-2">
+		<button class="btn btn-default" type="button" ng-click="$ctrl.clearCart()" ng-show="$ctrl.showClearCart">
+			clear cart
+		</button>
+	</div>
+
+	<div class="col-md-2">
+		<button class="btn btn-default" type="button" ng-click="$ctrl.continueShopping()" ng-show="$ctrl.showContinueShopping">
+			continue shopping
+		</button>
+	</div>
+
+	<div class="col-md-2">
+		<button type="button" class="btn btn-default" ng-click="$ctrl.checkout()" ng-show="$ctrl.showCheckout">
+			proceed to checkout <i class="fa fa-arrow-right"></i>
+		</button>
+	</div>
+
+	<div class="col-md-2">
+		<button type="button" class="btn btn-default" ng-click="$ctrl.login()" ng-show="$ctrl.showLogin">
+			<i class="fa fa-user"></i> login
+		</button>
+	</div>
+
+	</div>
+</div>

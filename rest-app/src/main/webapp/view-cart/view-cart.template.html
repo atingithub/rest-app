@@ -1,9 +1,20 @@
 <div class="row">
-	<p>Your shopping cart contains {{$ctrl.cartItems.length}} item.</p>
+	<div class="col-md-6">
+		<h1>cart</h1>
+		<p>Your shopping cart contains {{$ctrl.cartItems.length}} item.</p>
+	</div>
+	
+	<!--<div class="col-md-6">
+		<button class="btn btn-default" type="button">clear cart</button>
+		<button class="btn btn-default" type="button"><a href="#!/products">continue shopping</a></button>
+		<button type="button" class="btn btn-default"><a href="#!/checkout">proceed to checkout <i class="fa fa-arrow-right"></i></a>
+		</button>
+	</div>-->
 </div>
 
+<!--
 <div class="row">
-	<div class="col-md-8 col-md-offset-6">
+	<div class="col-md-8 col-md-offset-5">
 		<div class="btn-toolbar" role="toolbar" aria-label="...">
 			<div class="btn-group" role="group" aria-label="...">
 				<button class="btn btn-default" type="button">clear cart</button>
@@ -18,7 +29,8 @@
 			</div>
 		</div>
 	</div>
-</div>
+	
+</div> -->
 
 <div class="row">
 	<table class="table table-striped">
@@ -31,18 +43,24 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="cart in $ctrl.cartItems">
-				<td><img ng-src="img/products/{{cart.name}}.png" class="img-responsive" alt="dairy"></td>
-				<td><div id="pr-description">{{cart.description}}</div></td>
-				<td><div id="pr-price"><i class="fa fa-usd"></i> {{cart.price}}</div></td>
+			<tr ng-repeat="cart in $ctrl.carts">
+				<td>
+					<img ng-src="img/products/{{cart.name}}.png" class="img-responsive" alt="{{cart.name}}">
+				</td>
+				<td>
+					<div id="pr-description">{{cart.description}}</div>
+				</td>
+				<td>
+					<div id="pr-price"><i class="fa fa-usd"></i> {{cart.price}}</div>
+				</td>
 				<td>
 					<div id="pr-update">
-						<input type="text" class="form-control" size="2">
+						<input type="text" class="form-control" size="1" ng-model="cart.quantity" >
 					</div>
 				</td>
 				<td>
 					<div id="pr-update-btn">
-						<button class="btn btn-default" type="button">update</button>
+						<button class="btn btn-default" type="button" ng-click="$ctrl.updateCart(cart)">update</button>
 					</div>
 				</td>
 			</tr>

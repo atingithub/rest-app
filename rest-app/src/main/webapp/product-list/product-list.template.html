@@ -1,27 +1,43 @@
 <div class="row">
+	<div class="col-md-6">
+		<h1>{{$ctrl.categoryName}}</h1>
+	</div>
+</div>
+
+<div class="row">
 	<div class="col-md-4">
-		<div id="category-list" class="list-group">
-			<a href="#" class="list-group-item" ng-repeat="category in $ctrl.categories">
+		<div class="list-group">
+			<a href="#!/products?name={{category.name}}" class="list-group-item"
+				 ng-repeat="category in $ctrl.categories">
 				{{category.name}}
 				<div class="pull-right"><i class="fa fa-angle-right"></i></div>
 			</a>
 		</div>
 	</div>
-		
+	
 	<div class="col-md-8">
 		<table class="table table-striped">
-			<thead>
-			<tr>
-				<th id="product-id-name">{{$ctrl.products[0].categoryId.name}}</th>
-			</tr>
-			</thead>
 			<tbody>
 				<tr ng-repeat="product in $ctrl.products">
-					<td><img ng-src="img/products/{{product.name}}.png" class="img-responsive" alt="dairy"></td>
-					<td><div id="pr-description"></div>{{product.description}}</td>
-					<td><div id="pr-price"><i class="fa fa-usd"></i> {{product.price}}</div></td>
-					<td><div id="pr-cart-btn"></div>
-						<button type="button" class="btn btn-default" ng-click=$ctrl.addToCart(product)>add to cart</button>
+					<td>
+						<img ng-src="img/products/{{product.name}}.png" class="img-responsive" alt="{{product.name}}">
+					</td>
+					<td>
+						<div id="pr-description">
+							{{product.description}}
+						</div>
+					</td>
+					<td>
+						<div id="pr-price">
+							<i class="fa fa-usd"></i> {{product.price}}
+						</div>
+					</td>
+					<td>
+						<div id="pr-cart-btn">
+							<button type="button" class="btn btn-default" ng-click=$ctrl.addToCart(product)>
+								add to cart
+							</button>
+						</div>
 					</td>
 				</tr>
 			</tbody>

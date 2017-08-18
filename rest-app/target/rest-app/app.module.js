@@ -7,5 +7,7 @@ angular.module('restApp', [
   'productList',
 	'viewCart',
 	'checkoutItem',
-	'confirmationView'
+	'confirmationView',
+	'topView',
+	'headerView'
 ]);

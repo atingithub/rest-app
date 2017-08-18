@@ -2,8 +2,8 @@ angular.
   module('restApp').
   component('productList', {
     templateUrl: 'product-list/product-list.template.html',
-    controller: ['$routeParams', 'Product', 'Cart',
-      function ProductController($routeParams, Product, Cart) {
+    controller: ['$routeParams', 'Product', 'Data',
+      function ProductController(Product, Cart, Data, $routeParams) {
 				
 				self = this;
 				
@@ -70,9 +70,17 @@ angular.
 										{
 												"id": 4,
 												"name": "fruit & veg"
+										},
+										{
+												"id": 5,
+												"name": "dry fruits"
+										},
+										{
+												"id": 6,
+												"name": "fresh fish"
 										}
 				];
-				
+				self.categoryName = 'dairy';
 				/*
 				Product.Category.query({}, function(categories) {
 					self.categories = categories;
@@ -84,19 +92,49 @@ angular.
 				});
 				*/
 				
-				Cart.cart = [];
-					
+				var quantity = 1;
+				Data.data = {};
+				Data.data.carts = [];
+				self.cartIndex = 0;
+				
 				self.addToCart = function addToCart(product)
 				{
+					console.log(product.id);
+					if (self.isItemAdded(Data.data.carts, product.id)) {
+						self.updateQuantity();
+					}
+					else {
+						self.addCartItems(product);
+					}
+					
+				}
+				
+				self.isItemAdded = function isItemAdded(cartList, productId) {
+					for(var i = 0; i < cartList.length; i++) {
+						if(cartList[i].id == productId) {
+							self.cartIndex = i;
+							return true;
+						}
+					}
+				}
+				
+				self.updateQuantity = function updateQuantity() {
+					Data.data.carts[self.cartIndex].quantity
+						= Data.data.carts[self.cartIndex].quantity + 1;
+				}
+				
+				self.addCartItems = function addCartItems(product) {
 					var cartItem = {};
 					
-					cartItem["id"] = product.id;
-					cartItem["name"] = product.name;
-					cartItem["description"] = product.description;
-					cartItem["price"] = product.price;
+					cartItem['id'] = product.id;
+					cartItem['name'] = product.name;
+					cartItem['description'] = product.description;
+					cartItem['price'] = product.price;
+					cartItem['quantity'] = quantity;
 					
-					Cart.cart.push(cartItem);
+					Data.data.carts.push(cartItem);
 				}
+				
       }
     ]
   });

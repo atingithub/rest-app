@@ -1,43 +1,34 @@
-<div id="singleColumn" class="row">
+<div class="row">
+	<div class="col-md-6">
+		<h1>confirmation</h1>
+		<p>Your order confirmation number is : <strong>XX-YYYY-ZZZ</strong></p>
+	</div>
+</div>
 
-		<p id="confirmationText">
-				[ text ]
-				<br><br>
-				[ order reference number ]
-		</p>
+<div class="row">
+	<div class="col-md-6">
+		<h4>Your Orders</h4>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="order in $ctrl.orderDetails">
+				<span class="badge"><span>&#36;</span> {{order.price}}</span>
+				{{order.name}}
+			</li>
+		</ul>
+	</div>
+	
+	<div class="col-md-6">
+		<h4>Delivery Details</h4>
+		<ul class="list-group">
+			<li class="list-group-item"><strong>name: </strong> {{$ctrl.customerDetails.name}}</li>
+			<li class="list-group-item"><strong>email: </strong> {{$ctrl.customerDetails.email}}</li>
+			<li class="list-group-item"><strong>phone: </strong> {{$ctrl.customerDetails.phone}}</li>
+			<li class="list-group-item"><strong>address: </strong> {{$ctrl.customerDetails.address}}</li>
+		</ul>
+	</div>
+</div>
 
-		<div class="summaryColumn" >
+<div class="row">
 
-				<table id="orderSummaryTable" class="detailsTable" >
-					<thead>
-						<tr class="header">
-								<th style="padding:10px">[ order summary table ]</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="order in $ctrl.orderDetails">
-							<td>{{order.name}}</td>
-							<td>{{order.price}}</td>
-						</tr>
-					</tbody>
-				</table>
-
-		</div>
-
-		<div class="summaryColumn" >
-
-			<table id="deliveryAddressTable" class="table table-striped detailsTable">
-				<thead>
-					<tr><th id="product-id-name">[ customer details ]</th></tr>
-				</thead>
-				<tbody>
-					<tr><td>{{$ctrl.customerDetails.name}}</td></tr>
-					<tr><td>{{$ctrl.customerDetails.email}}</td></tr>
-					<tr><td>{{$ctrl.customerDetails.phone}}</td></tr>
-					<tr><td>{{$ctrl.customerDetails.address}}</td></tr>
-				</tbody>
-			</table>
-
-		</div>
-
+	<h3>Thank you for shopping with us!</h3>
+	<p><a href="#!/category">continue shopping</a></p>
 </div>

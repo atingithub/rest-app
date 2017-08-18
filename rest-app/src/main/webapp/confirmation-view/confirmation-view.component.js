@@ -2,12 +2,12 @@ angular.
   module('restApp').
   component('confirmationView', {
     templateUrl: 'confirmation-view/confirmation-view.template.html',
-    controller: ['Customer', 'Cart',
-      function ConfirmationViewController(Customer, Cart) {
+    controller: ['Customer', 'Data',
+      function ConfirmationViewController(Customer, Data) {
 				var self = this;
 				
-				self.customerDetails = Customer.Details;
-				self.orderDetails = Cart.cart;
+				self.customerDetails = Data.data.customers;
+				self.orderDetails = Data.data.carts;
 			}
 		]
   });

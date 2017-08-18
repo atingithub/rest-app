@@ -1,5 +1,4 @@
 .header-container {
-	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
@@ -23,7 +22,8 @@
 }
 
 #header-pos {
-	margin-top: -25px;
+	margin-top: 5px;
+	text-align: center;
 }
 
 #bottom-container {
@@ -46,14 +46,17 @@
 }
 
 #category-list {
-	margin-top: 40px;
+	margin-left: 20px;
 }
 
 .header-container, .top-widget {
 	display: inline-block;
 }
 
-.top-widget {
-	margin-top: 10px;
-	margin-left: 20px;
+.top-view {
+	margin-top: 5px;
+}
+
+.category-container {
+	padding-left: 10px;
 }
