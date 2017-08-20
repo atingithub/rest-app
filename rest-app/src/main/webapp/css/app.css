@@ -3,17 +3,39 @@
 }
 
 #logo {
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px
+}
+
+#logoText {
+	width: 300px;
+	height: 30px;
 }
 
 .header-container #logo, #logoText {
 	display: inline-block;
 }
 
-#logoText {
-	margin-top: -15px;
-	margin-left: 50px;
+.search-container {
+	margin-top: 10px;
+}
+
+.cart-container {
+	margin-top: 10px;
+}
+
+.footer-link {
+	margin-top : 5px;
+}
+
+.login-container {
+	background-color: rgb(226, 226, 226);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.login-form-container {
+	border-color: rgb(226, 226, 226);
 }
 
 #stalk-container {
@@ -34,23 +56,12 @@
 	float: right;
 }
 
-#pr-description, #pr-price, #pr-cart-btn {
-	margin-top: 10px;
-}
-
-#text-box-size {
-}
-
 #product-id-name {
 	font-size: 18px;
 }
 
-#category-list {
-	margin-left: 20px;
-}
-
-.header-container, .top-widget {
-	display: inline-block;
+#category-list li {
+	border-radius: 0px;
 }
 
 .top-view {
@@ -59,4 +70,53 @@
 
 .category-container {
 	padding-left: 10px;
+}
+
+.table > thead > tr > th {
+	text-align: center;
+}
+
+.table > tbody > tr > td {
+	vertical-align: middle;
+}
+
+.table > tbody > tr > td {
+	margin-right: 0px;
+}
+
+table {
+	border-collapse: collapse;
+	margin-right: 0px;
+}
+
+.viewcart-container h1, button {
+	display: inline;
+}
+
+.viewcart-container > h1 {
+}
+
+.viewcart-container > button {
+	border: 0px;
+}
+
+/* modal to center */
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }

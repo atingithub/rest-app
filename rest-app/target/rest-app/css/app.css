@@ -1,20 +1,27 @@
 .header-container {
-	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
 #logo {
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px
+}
+
+#logoText {
+	width: 300px;
+	height: 30px;
 }
 
 .header-container #logo, #logoText {
 	display: inline-block;
 }
 
-#logoText {
-	margin-top: -15px;
-	margin-left: 50px;
+.search-container {
+	margin-top: 10px;
+}
+
+.cart-container {
+	margin-top: 10px;
 }
 
 #stalk-container {
@@ -23,7 +30,8 @@
 }
 
 #header-pos {
-	margin-top: -25px;
+	margin-top: 5px;
+	text-align: center;
 }
 
 #bottom-container {
@@ -46,7 +54,7 @@
 }
 
 #category-list {
-	margin-top: 40px;
+	margin-left: 20px;
 }
 
 .header-container, .top-widget {
@@ -54,4 +62,9 @@
 }
 
 .top-view {
+	margin-top: 5px;
+}
+
+.category-container {
+	padding-left: 10px;
 }

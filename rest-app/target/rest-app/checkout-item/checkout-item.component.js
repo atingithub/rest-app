@@ -2,26 +2,28 @@ angular.
   module('restApp').
   component('checkoutItem', {
     templateUrl: 'checkout-item/checkout-item.template.html',
-    controller: ['Cart', 'Customer', 
-      function CheckoutItemController(Cart, Customer) {
+    controller: ['Data', 'Customer', '$location',
+      function CheckoutItemController(Data, Customer, $location) {
 				var self = this;
 				
-				self.cartItems = Cart.cart;
+				self.carts = Data.data.carts;
+				
 				self.customer = {};
 				
 				self.subtotal = 0.0;
 				self.surcharge = 3.0;
 				
-				//for (i = 0; i < Cart.cart.length; i++) { 
-    		//	self.subtotal = self.subtotal  + Cart.cart[i].price;
-				//}
+				for (i = 0; i < Data.data.carts.length; i++) { 
+    			self.subtotal = self.subtotal  + (self.carts[i].price * self.carts[i].quantity);
+				}
 				
 				self.total = self.subtotal + self.surcharge;
 				
 				self.submitPurchase = function submitPurchase()
 				{
-					Customer.Details = self.customer;
-					Customer.Create.save({}, self.customer);
+					Data.data.customers = self.customer;
+					//Customer.Create.save({}, self.customer);
+					$location.path('/confirmation');
 				}
 			}
 		]

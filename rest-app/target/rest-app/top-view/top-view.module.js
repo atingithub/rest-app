@@ -1,1 +1,1 @@
-angular.module('topView', []);
+angular.module('topView', ['ngRoute', 'core.cart']);

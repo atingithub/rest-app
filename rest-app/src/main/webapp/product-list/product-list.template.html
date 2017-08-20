@@ -5,6 +5,7 @@
 </div>
 
 <div class="row">
+	
 	<div class="col-md-4">
 		<div class="list-group">
 			<a href="#!/products?name={{category.name}}" class="list-group-item"
@@ -15,33 +16,35 @@
 		</div>
 	</div>
 	
-	<div class="col-md-8">
-		<table class="table table-striped">
-			<tbody>
-				<tr ng-repeat="product in $ctrl.products">
-					<td>
-						<img ng-src="img/products/{{product.name}}.png" class="img-responsive" alt="{{product.name}}">
-					</td>
-					<td>
-						<div id="pr-description">
+	<div class="col-md-7">
+		<div class="panel panel-default">
+			<table class="table table-bordered">
+				<tbody>
+					<tr ng-repeat="product in $ctrl.products">
+
+						<td align="center">
+							<img ng-src="img/products/{{product.name}}.png" class="img-responsive" alt="{{product.name}}">
+						</td>
+
+						<td class="td-product">
 							{{product.description}}
-						</div>
-					</td>
-					<td>
-						<div id="pr-price">
-							<i class="fa fa-usd"></i> {{product.price}}
-						</div>
-					</td>
-					<td>
-						<div id="pr-cart-btn">
+						</td>
+
+						<td align="center">
+							&#36;{{product.price}}
+						</td>
+
+						<td align="center">
 							<button type="button" class="btn btn-default" ng-click=$ctrl.addToCart(product)>
-								add to cart
+									add to cart
 							</button>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
+	
 </div>	
  

@@ -15,10 +15,6 @@
 		<script src="app.module.js"></script>
 		<script src="app.config.js"></script>
 		<script src="app.animations.js"></script>
-		<script src="header-view/header-view.component.js"></script>
-		<script src="header-view/header-view.module.js"></script>
-		<script src="top-view/top-view.component.js"></script>
-		<script src="top-view/top-view.module.js"></script>
 		<script src="category-list/category-list.component.js"></script>
 		<script src="category-list/category-list.module.js"></script>
 		<script src="product-list/product-list.component.js"></script>
@@ -29,6 +25,10 @@
 		<script src="checkout-item/checkout-item.module.js"></script>
 		<script src="confirmation-view/confirmation-view.component.js"></script>
 		<script src="confirmation-view/confirmation-view.module.js"></script>
+		<script src="header-view/header-view.component.js"></script>
+		<script src="header-view/header-view.module.js"></script>
+		<script src="top-view/top-view.component.js"></script>
+		<script src="top-view/top-view.module.js"></script>
 		<script src="core/core.module.js"></script>
 		<script src="core/product/product.module.js"></script>
 		<script src="core/product/product.service.js"></script>
@@ -36,18 +36,35 @@
 		<script src="core/cart/cart.service.js"></script>
 		<script src="core/customer/customer.module.js"></script>
 		<script src="core/customer/customer.service.js"></script>
+		<script src="core/data/data.module.js"></script>
+		<script src="core/data/data.service.js"></script>
   </head>
   <body>
 		
 		<div class="container">
 				
 			<div ng-view></div>
-			
-			<div class="footer">
-				<a href="#">Privacy Policy</a> :: <a href="#">Contact</a> <i class="fa fa-copyright"></i> 2017 the affable bean.
-			</div>
 		
 		</div>
-      
+		
+		<div class="row footer">
+			<div class="col-md-4">
+				<i class="fa fa-facebook-official fa-2x"></i> &nbsp;
+				<i class="fa fa-twitter fa-2x"></i> &nbsp;
+				<i class="fa fa-google-plus fa-2x"></i> &nbsp; &nbsp;
+			</div>
+			<div class="col-md-8 footer-link">
+				<a href="#">Privacy Policy</a> :: <a href="#">Contact</a> <i class="fa fa-copyright"></i> 2017 the affable bean.
+				<!--<i class="fa fa-thumbs-o-up fa-2x"></i> &nbsp;
+				<i class="fa fa-thumbs-o-down fa-2x"></i> -->
+			</div>
+		</div>
+		
+  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.js"></script>
+		
   </body>
 </html>

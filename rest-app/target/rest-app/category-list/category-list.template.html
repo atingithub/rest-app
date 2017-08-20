@@ -5,29 +5,15 @@
 		<h4>Our unique home delivery service brings you fresh organic produce, dairy, meats, breads and other delicious and healthy items direct to your doorstep.</h4>
 	</div>
 	
-	
-	<div class="col-md-6">
-		<div class="row">
-			<div class="col-md-6">
-				<a href="#!/products"><img ng-src="img/categories/{{$ctrl.categories[0].name}}.jpg" class="img-responsive" alt="dairy"></a>
-				<h3 id="header-pos">dairy</h3>
-			</div>
-			<div class="col-md-6">
-				<a href="#!/products?name=meats"><img ng-src="img/categories/{{$ctrl.categories[1].name}}.jpg" class="img-responsive" alt="meats"></a>
-				<h3 id="header-pos">meats</h3>
-			</div>
-		</div>
-		
-		<div id="bottom-container" class="row">
-			<div class="col-md-6">
-				<a href="#!/products?name=bakery"><img ng-src="img/categories/{{$ctrl.categories[2].name}}.jpg" class="img-responsive" alt="bakery"></a>
-				<h3 id="header-pos">bakery</h3>
-			</div>
-			<div class="col-md-6">
-				<a href="#!/products?name=fruit & veg"><img src="img/categories/{{$ctrl.categories[3].name}}.jpg" class="img-responsive" alt="fruit & vegs"></a>
-				<h3 id="header-pos">fruit & veg</h3>
-			</div>
-		</div>
+	<div class="col-md-8">
+		<ul id="category-list" class="list-group list-inline">
+			<li class="list-group-item" ng-repeat="category in $ctrl.categories">
+				<a href="#!/products?name={{category.name}}">
+					<img ng-src="img/categories/{{category.name}}.jpg" class="img-responsive" alt="{{category.name}}">
+					<h3 id="header-pos">{{category.name}}</h3>
+				</a>
+			</li>
+		</ul>
 	</div>
 
 </div>
