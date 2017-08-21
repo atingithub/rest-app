@@ -24,6 +24,20 @@
 	margin-top: 10px;
 }
 
+.footer-link {
+	margin-top : 5px;
+}
+
+.login-container {
+	background-color: rgb(226, 226, 226);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.login-form-container {
+	border-color: rgb(226, 226, 226);
+}
+
 #stalk-container {
 	margin-top: -28px;
 	margin-left: -2px;
@@ -42,23 +56,25 @@
 	float: right;
 }
 
-#pr-description, #pr-price, #pr-cart-btn {
-	margin-top: 10px;
-}
-
-#text-box-size {
-}
-
 #product-id-name {
 	font-size: 18px;
 }
 
-#category-list {
-	margin-left: 20px;
+#sale-image {
+	width: 200px;
+	height: 300px;
 }
 
-.header-container, .top-widget {
-	display: inline-block;
+#category-list li {
+	border-radius: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+#product-image {
+	width: 350px;
+	height: 150px;
 }
 
 .top-view {
@@ -67,4 +83,66 @@
 
 .category-container {
 	padding-left: 10px;
+}
+
+.table > thead > tr > th {
+	text-align: center;
+}
+
+.table > tbody > tr > td {
+	vertical-align: middle;
+}
+
+.table > tbody > tr > td {
+	margin-right: 0px;
+}
+
+table {
+	border-collapse: collapse;
+	margin-right: 0px;
+}
+
+.viewcart-container h1, button {
+	display: inline;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+/* modal to center */
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }

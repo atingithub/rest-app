@@ -12,7 +12,7 @@ angular.
 										'<header-view></header-view>' +
 				            '<category-list></category-list>'
         }).
-        when('/products', {
+        when('/category/products/:name', {
           template: '<top-view></top-view>' +
 										'<header-view></header-view>' +
 										'<product-list></product-list>'

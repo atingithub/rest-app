@@ -2,13 +2,16 @@
 
 	<div class="col-md-4">
 		<h3>Welcome to the online home of the Affable Bean Green Grocer.</h3>
-		<h4>Our unique home delivery service brings you fresh organic produce, dairy, meats, breads and other delicious and healthy items direct to your doorstep.</h4>
+		<h4>Our unique home delivery service brings you fresh organic produce, dairy, meats, breads and other delicious and healthy items direct to your doorstep.</h4><br><br><br><br><br>
+		<img ng-src="img/sale.jpg" class="img-responsive" alt="sale">
+		<!--<img ng-src="img/banner2.jpg" class="img-responsive" alt="banner">
+		<img ng-src="img/stalk.png" class="img-responsive" alt="stalk">-->
 	</div>
 	
-	<div class="col-md-8" align="center">
-		<ul id="category-list" class="list-group list-inline">
+	<div class="col-md-8">
+		<ul id="category-list" class="list-group list-inline" align="center">
 			<li class="list-group-item" ng-repeat="category in $ctrl.categories">
-				<a href="#!/products?name={{category.name}}">
+				<a href="#!/category/products/{{category.name}}">
 					<img ng-src="img/categories/{{category.name}}.jpg" class="img-responsive" alt="{{category.name}}">
 					<h3 id="header-pos">{{category.name}}</h3>
 				</a>

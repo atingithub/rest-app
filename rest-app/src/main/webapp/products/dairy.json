@@ -1,0 +1,46 @@
+[
+    {
+        "categoryId": {
+            "id": 1,
+            "name": "dairy"
+        },
+        "description": "semi skimmed (1L)",
+        "id": 17,
+        "lastUpdate": "2017-08-11T17:06:34+05:30",
+        "name": "milk",
+        "price": 1.7
+    },
+    {
+        "categoryId": {
+            "id": 1,
+            "name": "dairy"
+        },
+        "description": "mild cheddar (330g)",
+        "id": 18,
+        "lastUpdate": "2017-08-11T17:06:34+05:30",
+        "name": "cheese",
+        "price": 2.39
+    },
+    {
+        "categoryId": {
+            "id": 1,
+            "name": "dairy"
+        },
+        "description": "unsalted (250g)",
+        "id": 19,
+        "lastUpdate": "2017-08-11T17:06:34+05:30",
+        "name": "butter",
+        "price": 1.09
+    },
+    {
+        "categoryId": {
+            "id": 1,
+            "name": "dairy"
+        },
+        "description": "medium-sized (6 eggs)",
+        "id": 20,
+        "lastUpdate": "2017-08-11T17:06:34+05:30",
+        "name": "free range eggs",
+        "price": 1.76
+    }
+]

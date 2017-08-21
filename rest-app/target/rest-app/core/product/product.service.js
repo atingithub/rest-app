@@ -11,10 +11,9 @@ angular.
 					}
 				}),
 				
-				Products : $resource('http://localhost:8081/rest-app/rest/api/products?name=:categoryName', {}, {
+				Products : $resource('http://localhost:8081/rest-app/rest/api/category/products?name=:name', {}, {
 					get: {
 						method: 'GET',
-						params: {categoryName: 'dairy'},
 						isArray: true
 					}
 				})

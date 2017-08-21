@@ -1,8 +1,8 @@
 <div class="row">
-	<div class="col-md-10 viewcart-container">
+	<div class="col-md-12 viewcart-container">
 		<h1>cart</h1>
-		<button type="button" class="btn btn-info pull-right">
-			<a href="#!/checkout">proceed to checkout <i class="fa fa-arrow-right"></i></a>
+		<button type="button" class="btn btn-info pull-right" ng-click="$ctrl.proceedCheckout()">
+			proceed to checkout <i class="fa fa-arrow-right"></i>
 		</button>
 	</div>
 	
@@ -36,7 +36,7 @@
 </div> -->
 
 <div class="row">
-	<div class="col-md-10">
+	<div class="col-md-10 col-md-offset-2">
 		<div class="panel panel-default">
 			<table class="table table-bordered">
 				<thead>
@@ -69,11 +69,11 @@
 						</td>
 
 						<td align="center">
-							<button class="btn btn-default" type="button" ng-click="$ctrl.updateCart(cart)">update</button>
+							<button class="btn btn-default btn-link" type="button" ng-click="$ctrl.updateCart(cart)">update</button>
 						</td>
 						
 						<td align="center">
-							<button class="btn btn-default" type="button" ng-click="">remove</button>
+							<button class="btn btn-default btn-link" type="button" ng-click="">remove</button>
 						</td>
 
 					</tr>

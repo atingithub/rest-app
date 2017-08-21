@@ -1,0 +1,46 @@
+[
+    {
+        "categoryId": {
+            "id": 2,
+            "name": "meats"
+        },
+        "description": "rolled in fresh herbs 2 patties (250g)",
+        "id": 21,
+        "lastUpdate": "2017-08-20T17:14:59+05:30",
+        "name": "organic meat patties",
+        "price": 2.29
+    },
+    {
+        "categoryId": {
+            "id": 2,
+            "name": "meats"
+        },
+        "description": "matured, organic (70g)",
+        "id": 22,
+        "lastUpdate": "2017-08-11T17:06:34+05:30",
+        "name": "parma ham",
+        "price": 3.49
+    },
+    {
+        "categoryId": {
+            "id": 2,
+            "name": "meats"
+        },
+        "description": "free range (250g)",
+        "id": 23,
+        "lastUpdate": "2017-08-11T17:06:34+05:30",
+        "name": "chicken leg",
+        "price": 2.59
+    },
+    {
+        "categoryId": {
+            "id": 2,
+            "name": "meats"
+        },
+        "description": "reduced fat, pork 3 sausages (350g)",
+        "id": 24,
+        "lastUpdate": "2017-08-20T17:15:58+05:30",
+        "name": "sausages",
+        "price": 3.55
+    }
+]

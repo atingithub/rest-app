@@ -60,8 +60,21 @@
 	font-size: 18px;
 }
 
+#sale-image {
+	width: 200px;
+	height: 300px;
+}
+
 #category-list li {
 	border-radius: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+#product-image {
+	width: 350px;
+	height: 150px;
 }
 
 .top-view {
@@ -93,11 +106,24 @@ table {
 	display: inline;
 }
 
-.viewcart-container > h1 {
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.viewcart-container > button {
-	border: 0px;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
 
 /* modal to center */
