@@ -7,7 +7,7 @@ angular.
 				var self = this;
 				
 				self.customerDetails = Data.data.customers;
-				self.orderDetails = Data.data.carts;
+				self.orderDetails = Data.data.carts.orderedProducts;
 			}
 		]
   });

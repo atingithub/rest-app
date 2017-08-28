@@ -4,6 +4,7 @@ angular.
     function($resource) {
 			
       return {
+				
 				Category : $resource('http://localhost:8081/rest-app/rest/api/categories', {}, {
 					query: {
 						method: 'GET',

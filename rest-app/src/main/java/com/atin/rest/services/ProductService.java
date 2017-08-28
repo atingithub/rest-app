@@ -51,7 +51,7 @@ public class ProductService extends AbstractService<Product> {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response updateProduct(Product product) {
-        super.edit(product);
+        //super.edit(product);
         return Response.ok().build();
     }
     
@@ -60,7 +60,7 @@ public class ProductService extends AbstractService<Product> {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response deleteProduct(Product product) {
-        super.remove(product);
+        //super.remove(product);
         return Response.ok().build();
     }
     

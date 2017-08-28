@@ -7,7 +7,6 @@ angular.
 				var self = this;
 				
 				self.carts = Data.data.carts;
-				console.log(Data.data.carts);
 				
 				self.cartQuantity = 0;
 				self.updateCart = function updateCart(cart) {

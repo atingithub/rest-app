@@ -123,7 +123,7 @@ public class CustomerOrder implements Serializable {
         this.customerId = customerId;
     }
 
-    @XmlTransient
+    /*@XmlTransient*/
     public Collection<OrderedProduct> getOrderedProductCollection() {
         return orderedProductCollection;
     }

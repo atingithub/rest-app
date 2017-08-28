@@ -6,7 +6,10 @@
 package com.atin.rest.services;
 
 import com.atin.rest.app.JPAUtility;
+import com.atin.rest.model.CustomerOrder;
 import com.atin.rest.model.OrderedProduct;
+import com.atin.rest.model.OrderedProductPK;
+import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.ws.rs.Consumes;
@@ -50,8 +53,32 @@ public class OrderedProductService extends AbstractService<OrderedProduct> {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response createOrderedProduct(OrderedProduct orderedProduct) {
-        super.create(orderedProduct);
+        //super.create(orderedProduct);
         return Response.ok().build();
+    }
+    
+    @POST
+    @Path("/order/product/add")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Response addOrderedProducts(CustomerOrder customerOrder) {
+        
+        Collection<OrderedProduct> orderedProductCollection =
+                    customerOrder.getOrderedProductCollection();
+            
+        for (OrderedProduct orderedProduct : orderedProductCollection)
+        {
+            int productId = orderedProduct.getProduct().getId();
+            // set up primary key object
+            OrderedProductPK orderedProductPK = new OrderedProductPK();
+            orderedProductPK.setCustomerOrderId(customerOrder.getId());
+            orderedProductPK.setProductId(productId);
+
+            orderedProduct.setOrderedProductPK(orderedProductPK);
+            //super.create(orderedProduct);
+        }
+        
+        return Response.status(200).entity(customerOrder).build();
     }
     
     @PUT

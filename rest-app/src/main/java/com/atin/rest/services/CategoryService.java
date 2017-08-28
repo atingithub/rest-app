@@ -76,7 +76,7 @@ public class CategoryService extends AbstractService<Category> {
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response createCategory(Category category) {
-        super.create(category);
+        //super.create(category);
         return Response.ok().build();
     }
     

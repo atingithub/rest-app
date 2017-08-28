@@ -1,5 +1,5 @@
 
-angular.module('restApp', [
+var app = angular.module('restApp', [
 	'ngRoute',
 	'ngAnimate',
 	'core',
@@ -9,5 +9,7 @@ angular.module('restApp', [
 	'checkoutItem',
 	'confirmationView',
 	'topView',
-	'headerView'
+	'headerView',
+	'productView'
 ]);
+

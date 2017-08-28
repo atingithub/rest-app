@@ -1,1 +1,1 @@
-angular.module('headerView', []);
+angular.module('headerView', ['core.data']);

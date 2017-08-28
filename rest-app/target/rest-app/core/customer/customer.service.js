@@ -4,7 +4,7 @@ angular.
 		function($resource) {
 		
 			return {
-				Create : $resource('http://localhost:8081/rest-app/rest/api/customer/create', {}, {
+				AddCustomer : $resource('http://localhost:8081/rest-app/rest/api/customer/add', {}, {
 					save : {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/json' }

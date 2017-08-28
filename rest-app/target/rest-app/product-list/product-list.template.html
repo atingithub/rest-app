@@ -8,7 +8,7 @@
 	
 	<div class="col-md-4">
 		<div class="list-group">
-			<a ng-href="#!/category/products/{{category.name}}" class="list-group-item"
+			<a href ng-click="$ctrl.categoryClicked(category.name)" class="list-group-item"
 				 ng-repeat="category in $ctrl.categories">
 				{{category.name}}
 				<div class="pull-right"><i class="fa fa-angle-right"></i></div>
@@ -23,25 +23,14 @@
 			<table class="table table-bordered">
 				<tbody>
 					<tr ng-repeat="product in $ctrl.products">
-
 						<td align="center">
 							<img ng-src="img/products/{{product.name}}.png" class="img-responsive" alt="{{product.name}}">
 						</td>
-
-						<td class="td-product">
-							{{product.description}}
-						</td>
-
+						<td class="td-product">{{product.description}}</td>
+						<td align="center">&#36;{{product.price}}</td>
 						<td align="center">
-							&#36;{{product.price}}
+							<button type="button" class="btn btn-default btn-link" ng-click=$ctrl.addToCart(product)>add to cart</button>
 						</td>
-
-						<td align="center">
-							<button type="button" class="btn btn-default btn-link" ng-click=$ctrl.addToCart(product)>
-									add to cart
-							</button>
-						</td>
-
 					</tr>
 				</tbody>
 			</table>

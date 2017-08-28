@@ -1,18 +1,26 @@
 <div class="row">
-	<div class="col-md-12 viewcart-container">
+	<div class="col-md-2 viewcart-container">
 		<h1>cart</h1>
-		<button type="button" class="btn btn-info pull-right" ng-click="$ctrl.proceedCheckout()">
+	</div>
+	
+	<div class="col-md-3 viewcart-container pull-right">
+		<button type="button" class="btn btn-default" ng-click="$ctrl.proceedCheckout()">
 			proceed to checkout <i class="fa fa-arrow-right"></i>
 		</button>
 	</div>
 	
-	<!--<div class="col-md-6 btn-container">
-		<button class="btn btn-default" type="button">clear cart</button>
-		<button class="btn btn-default" type="button"><a href="#!/products">continue shopping</a></button> 
+	<div class="col-md-3 viewcart-container pull-right">
 		<button type="button" class="btn btn-default">
-			<a href="#!/checkout">proceed to checkout <i class="fa fa-arrow-right"></i></a>
+			continue shopping
 		</button>
-	</div>-->
+	</div>
+	
+	<div class="col-md-3 viewcart-container pull-right">
+		<button type="button" class="btn btn-default">
+			clear cart 
+		</button>
+	</div>
+
 </div>
 
 <!--
@@ -53,15 +61,15 @@
 					<tr ng-repeat="cart in $ctrl.carts">
 
 						<td align="center">
-							<img ng-src="img/products/{{cart.name}}.png" class="img-responsive" alt="{{cart.name}}">
+							<img ng-src="img/products/{{cart.product.name}}.png" class="img-responsive" alt="{{cart.product.name}}">
 						</td>
 
 						<td>
-							{{cart.description}}
+							{{cart.product.description}}
 						</td>
 
 						<td align="center">
-							&#36;{{cart.price}}
+							&#36;{{cart.product.price}}
 						</td>
 
 						<td align="center">

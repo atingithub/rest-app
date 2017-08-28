@@ -2,9 +2,16 @@ angular.
   module('restApp').
   component('headerView', {
     templateUrl: 'header-view/header-view.template.html',
-    controller: [ 'Product', 'Cart', 'Data', '$location',
-      function HeaderViewController(Product, Cart, Data, $location) {
+    controller: [ 'Product', 'Data', '$location', '$rootScope',
+      function HeaderViewController(Product, Data, $location, $rootScope) {
 				self = this;
+				
+				Data.data = {};
+				Data.data.carts = [];
+				
+				console.log(Data);
+				
+				$rootScope.cartCount = 0;
 				
 				self.viewCart = function viewCart()
 				{

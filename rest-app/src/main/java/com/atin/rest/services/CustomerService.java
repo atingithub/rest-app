@@ -7,7 +7,13 @@ package com.atin.rest.services;
 
 import com.atin.rest.app.JPAUtility;
 import com.atin.rest.model.Customer;
+import com.atin.rest.model.CustomerOrder;
+import com.atin.rest.model.OrderedProduct;
+import com.atin.rest.model.OrderedProductPK;
+import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 import javax.persistence.EntityManager;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -46,12 +52,14 @@ public class CustomerService extends AbstractService<Customer> {
     }
     
     @POST
-    @Path("/customer/create")
+    @Path("/customer/add")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response createCustomer(Customer customer) {
+    public Response addCustomer(Customer customer) {
+        
         //super.create(customer);
-        return Response.ok().build();
+        customer.setId(2);
+        return Response.status(200).entity(customer).build();
     }
     
     @PUT

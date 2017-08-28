@@ -41,6 +41,9 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Customer.findByCcNumber", query = "SELECT c FROM Customer c WHERE c.ccNumber = :ccNumber")})
 public class Customer implements Serializable {
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customerId")
+    private Collection<User> userCollection;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -155,6 +158,7 @@ public class Customer implements Serializable {
         this.ccNumber = ccNumber;
     }
 
+    /*@XmlTransient*/
     @XmlTransient
     public Collection<CustomerOrder> getCustomerOrderCollection() {
         return customerOrderCollection;
@@ -187,6 +191,15 @@ public class Customer implements Serializable {
     @Override
     public String toString() {
         return "com.atin.rest.model.Customer[ id=" + id + " ]";
+    }
+
+    @XmlTransient
+    public Collection<User> getUserCollection() {
+        return userCollection;
+    }
+
+    public void setUserCollection(Collection<User> userCollection) {
+        this.userCollection = userCollection;
     }
     
 }

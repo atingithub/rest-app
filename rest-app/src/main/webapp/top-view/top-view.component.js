@@ -2,8 +2,8 @@ angular.
   module('restApp').
   component('topView', {
     templateUrl: 'top-view/top-view.template.html',
-    controller: ['Product', 'Cart', 'Data', '$location',
-      function TopViewController(Product, Cart, Data, $location) {
+    controller: ['Product', 'Cart', 'Data', '$location', 'Login',
+      function TopViewController(Product, Cart, Data, $location, Login) {
 				var self = this;
 				
 				self.cartCount = 0;
@@ -57,8 +57,16 @@ angular.
 					$location.path('/checkout');
 				}
 				
+				self.user = {};
+				
 				self.login = function login()
 				{
+					self.user = {
+						'id' : 'user',
+						'name' : 'password',
+						'email' : 'email'
+					}
+					Login.Create.save({}, )
 					console.log("login");
 					$location.path('/login');
 				}
